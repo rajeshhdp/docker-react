@@ -7,5 +7,5 @@ before_install:
    - docker build -t rajdockerlearning123/react-app -f Dockerfile.dev .
 
 script:
-   - docker run rajdockerlearning123/react-app npm run test -- --coverage
+   - docker run -e CI=true rajdockerlearning123/react-app npm run test 
   
